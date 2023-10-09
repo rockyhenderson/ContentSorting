@@ -13,11 +13,13 @@
     <h1>Sorting System Mk1</h1>
 
     <input type="text" id="search-input">
-    <button class="input-button">Search</button>
+    <button class="input-button" onclick="updateProductList()">Search</button>
     <select id="sort-select">
         <option value="name">Sort by Name</option>
         <option value="price">Sort by Price</option>
     </select>
+    <button onclick="SortByPrice()">Price</button>
+    <button onclick="SortByName()">Name</button>
     <main>
         <div id="productList">
         <!-- will be FILLED -->
