@@ -78,8 +78,3 @@ function updateProductList() {
   }
 }
 
-// Attach the updateProductList function to the input's "keyup" event using jQuery
-$('#searchInput').keyup(updateProductList);
-
-// Call the updateProductList function initially to load all products
-
