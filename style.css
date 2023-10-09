@@ -5,6 +5,13 @@ main{
     display: flex;
     justify-content: center;
 }
+#content-buttons{
+    display:flex;
+    justify-content: space-between;
+}
+button{
+    height:25px;
+}
 #productList{
     width:90vw;
     margin: 0 auto;
@@ -43,8 +50,4 @@ main{
     #productList{   
         max-width: 326px;
     }
-}
-img{
-    height:180px;
-    width:173.75px;
 }
