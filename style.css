@@ -1,0 +1,36 @@
+body{
+    background-color: linen;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+#productList{
+    width:90vw;
+    margin: 0 auto;
+    margin-top:40px;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap:20px;
+    max-width: 940px;
+}
+.meat-box{
+    background-color: lightgrey;
+    height:300px;
+    width:300px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left:auto;
+    border-radius: 10px;
+    text-align: center;
+
+}
+.meat-img{
+    padding-top:1vh;
+    height:60%;
+    width:60%;
+    margin:auto;
+}
