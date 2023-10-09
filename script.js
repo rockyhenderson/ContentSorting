@@ -54,28 +54,37 @@ function updateProductList() {
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().startsWith(searchText)
   );
-
-  for (var i = 0; i < filteredProducts.length; i++) {
-    var product = filteredProducts[i];
-
-    // Create a div for each item
+  console.log(filteredProducts)
+  if (filteredProducts.length === 0) {
     var div = $('<div class="meat-box">');
-
-    // Load the product image
-    var img = $('<img class="meat-img">').attr({
-      src: 'img/' + product.image, // Assuming the images are in a folder named 'img'
-      alt: 'photo of ' + product.name, // Name in alt text for accessibility
-    });
-
-    // Create a paragraph element to display product information
-    var h2 = $('<h2>').text(product.name)
-    var h3 = $('<h3>').text("£" + product.price + "/per pound")
-    // adds both to div
-    div.append(img, h2, h3);
-
-    // Add the div to the container with the ID 'productList'
+    var h2 =  $('<h2>').text("We dont have anything like this yet! Check back as we update regularly :)")
+    div.append(h2)
     $('#productList').append(div);
   }
+  else{
+    for (var i = 0; i < filteredProducts.length; i++) {
+      var product = filteredProducts[i];
+  
+      // Create a div for each item
+      var div = $('<div class="meat-box">');
+  
+      // Load the product image
+      var img = $('<img class="meat-img">').attr({
+        src: 'img/' + product.image, // Assuming the images are in a folder named 'img'
+        alt: 'photo of ' + product.name, // Name in alt text for accessibility
+      });
+  
+      // Create a paragraph element to display product information
+      var h2 = $('<h2>').text(product.name)
+      var h3 = $('<h3>').text("£" + product.price + "/per pound")
+      // adds both to div
+      div.append(img, h2, h3);
+  
+      // Add the div to the container with the ID 'productList'
+      $('#productList').append(div);
+    }
+  }
+  
 }
 
 
