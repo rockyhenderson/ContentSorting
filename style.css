@@ -34,3 +34,13 @@ main{
     width:60%;
     margin:auto;
 }
+@media only screen and (max-width: 1044px) {
+    #productList{   
+        max-width: 620px;
+    }
+}
+@media only screen and (max-width: 688px) {
+    #productList{   
+        max-width: 326px;
+    }
+}
