@@ -6,6 +6,13 @@ const products = [
   { name: "Pollutry", price: 15, image: "pollutry.jpg" },
   { name: "Chevon", price: 65, image: "chevon.jpg" },
   { name: "Venison", price: 45, image: "venison.jpg" },
+  { name: "Lamb", price: 30, image: "lamb.jpg" },
+  { name: "Game", price: 5, image: "game.jpg" },
+  { name: "Exotic", price: 100, image: "exotic.jpg" },
+  { name: "Organ", price: 80, image: "organ.jpg" },
+  { name: "Processed", price: 10, image: "processed.jpg" },
+  { name: "Deli", price: 25, image: "deli.jpg" },
+  { name: "Bison", price: 25, image: "bison.jpg" },
 ];
 
 $(document).ready(createDiv);
