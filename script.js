@@ -20,7 +20,6 @@ function SortByName(){ //starts function
     createDiv()
 }
 // Attach the searchProducts function to the input's "keyup" event using jQuery
-$('#searchInput').keyup(searchProducts);
 
 function createDiv(){
     $("#productList").html(""); //clears div
@@ -53,29 +52,30 @@ function updateProductList() {
   const searchText = $('#search-input').val().toLowerCase();
   
   const filteredProducts = products.filter((product) =>
-      product.name.toLowerCase().includes(searchText)
+    product.name.toLowerCase().startsWith(searchText)
   );
 
   for (var i = 0; i < filteredProducts.length; i++) {
-      var product = filteredProducts[i];
+    var product = filteredProducts[i];
 
-      // Create a div for each item
-      var div = $('<div class="meat-box">');
+    // Create a div for each item
+    var div = $('<div class="meat-box">');
 
-      // Load the product image
-      var img = $('<img class="meat-img">').attr({
-          src: 'img/' + product.image, // Assuming the images are in a folder named 'img'
-          alt: 'photo of ' + product.name, // Name in alt text for accessibility
-      });
+    // Load the product image
+    var img = $('<img class="meat-img">').attr({
+      src: 'img/' + product.image, // Assuming the images are in a folder named 'img'
+      alt: 'photo of ' + product.name, // Name in alt text for accessibility
+    });
 
-      // Create a paragraph element to display product information
-      var p = $('<p>').text('This is ' + product.name + '! Costs ' + product.price);
+    // Create a paragraph element to display product information
+    var h2 = $('<h2>').text(product.name)
+    var h3 = $('<h3>').text("£" + product.price + "/per pound")
+    // adds both to div
+    div.append(img, h2, h3);
 
-      // Add both the image and paragraph to the div
-      div.append(img, p);
-
-      // Add the div to the container with the ID 'productList'
-      $('#productList').append(div);
+    // Add the div to the container with the ID 'productList'
+    $('#productList').append(div);
   }
 }
+
 
