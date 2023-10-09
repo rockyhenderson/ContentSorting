@@ -11,23 +11,6 @@ const products = [
 $(document).ready(createDiv);
 
 
-document.addEventListener("DOMContentLoaded", function () {
-  //waits for the page to be loaded
-  const select = document.getElementById("sort-select"); //finds the selection box
-
-  select.addEventListener("change", () => {
-    //waits for the change in selection box
-    const selectedValue = select.value; //finds the value
-
-    if (selectedValue === "price") {
-      //checks if the value is "price", if so runs code
-      SortByPrice();
-    }
-    else{
-        SortByName()
-    }
-  });
-});
 function SortByPrice() { //initilize function
     products.sort((a, b) => a.price - b.price); //sorts by price :)
     createDiv()
